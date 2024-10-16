@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowbite Modal - Tailwind 2.2.19</title>
+    <!-- Tailwind CSS 2.2.19 -->
+    <script src="https://cdn.tailwindcss.com/2.2.19"></script>
+    <!-- Flowbite CSS (use older Flowbite version for compatibility) -->
+    <link href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Trigger Button -->
+    <button data-modal-target="exampleModal" data-modal-toggle="exampleModal"
+        class="bg-blue-600 text-white px-4 py-2 rounded-lg">
+        Open Modal
+    </button>
+
+    <!-- Modal -->
+    <div id="exampleModal" tabindex="-1" aria-hidden="true"
+        class="hidden fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-50">
+        <div class="relative p-6 w-full max-w-md bg-white rounded-lg shadow-lg">
+            <h3 class="text-lg font-semibold">Example Modal</h3>
+            <p class="mt-4">This is a sample modal that works with Flowbite 2.3.0 and Tailwind 2.2.19.</p>
+            <button data-modal-toggle="exampleModal"
+                class="mt-6 bg-gray-600 text-white px-4 py-2 rounded-lg">
+                Close Modal
+            </button>
+        </div>
+    </div>
+
+    <!-- Flowbite JS -->
+    <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.js"></script>
+</body>
+</html>
