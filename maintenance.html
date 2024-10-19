@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แจ้งปิดระบบบันทึกผลคะแนน</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap');
+
+        body {
+            font-family: "Chakra Petch", sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .logo {
+            max-width: 120px;
+            margin: 0 auto 1rem;
+        }
+
+        .system-name {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .card-header {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff4c4c;
+            margin-bottom: 1rem;
+        }
+
+        .card-content {
+            font-size: 1.2rem;
+            color: #333333;
+            margin-bottom: 1.5rem;
+        }
+
+        .news-ticker {
+            background-color: #007bff;
+            color: white;
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+
+        .news-ticker span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll 10s linear infinite;
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .animate {
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .btn {
+            background-color: #ff4c4c;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff6666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container animate">
+        <!-- โลโก้ระบบ -->
+        <img src="https://sci.rmutp.ac.th/web2558/wp-content/uploads/2017/11/SciRMUTP-Thai-300x295.png" alt="Logo"
+            class="logo">
+
+        <!-- ชื่อระบบ -->
+        <div class="system-name">
+            ระบบบริหารจัดการผลการประกวด <br>
+
+            การประกวดดาว-เดือน <br>
+            คณะวิทยาศาสตร์และเทคโนโลยี <br>
+
+            ( SCIENCE-AWARDS 2025 )
+        </div>
+
+        <!-- ข่าวประชาสัมพันธ์ -->
+        <div class="news-ticker">
+            <span>ประกาศ: ระบบถูกปิดเพื่อการปรับปรุง กรุณาลองใหม่อีกครั้งภายหลัง</span>
+        </div>
+
+        <!-- ข้อความแจ้งปิดระบบ -->
+        <div class="card-header">
+            แจ้งปิดระบบ
+        </div>
+        <div class="card-content">
+            ระบบบันทึกผลคะแนนการประกวดถูกปิดชั่วคราว <br> เพื่อปรับปรุงและพัฒนาคุณภาพของระบบ<br> <br>กรุณาลองใหม่อีกครั้งภายหลัง
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+</body>
+
+</html>
