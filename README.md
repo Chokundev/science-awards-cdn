@@ -26,4 +26,5 @@ https://sci-awards.site/ < path-to-resource >
 Example usage in an HTML file:
 ```html
 <link rel="stylesheet" href="https://sci-awards.site/science-awards-2025/styles/main.css">
-<script src="https://sci-awards.site/scripts/app.js"></script``
+<script src="https://sci-awards.site/scripts/app.js"></script>
+```
