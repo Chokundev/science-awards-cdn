@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ER Diagram - T-shirt Booking System</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.4.0/mermaid.min.js"></script>
+  <style>
+    body { padding: 2rem; background: #f9f9f9; font-family: sans-serif; }
+    .mermaid { background: white; padding: 1rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>
+  <div class="mermaid">
+    erDiagram
+      booking_data ||--|| branch : "belongs_to"
+      booking_data ||--o{ payment_slip : "has"
+      booking_data ||--o{ receipt : "has"
+      booking_data ||--|| admin : "confirmed_by"
+      
+      branch {
+        int branch_id PK
+        char branch_name
+      }
+
+      admin {
+        int admin_id PK
+        char username
+        char password
+        char name
+      }
+
+      booking_data {
+        int booking_id PK
+        char time_stamp
+        char name
+        char std_id
+        char email
+        int branch_id FK
+        int size_xs
+        int size_s
+        int size_m
+        int size_l
+        int size_xl
+        int size_2xl
+        int size_3xl
+        int size_4xl
+        enum payment_status
+        int total_price
+        bigint payment_slip
+        bigint booking_slip
+        int confirm_admin_id FK
+      }
+
+      payment_slip {
+        bigint slip_id PK
+        int booking_id FK
+        char slip_path
+        char upload_time
+      }
+
+      receipt {
+        bigint receipt_id PK
+        int booking_id FK
+        char receipt_path
+        char issued_time
+      }
+  </div>
+
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+</body>
+</html>
